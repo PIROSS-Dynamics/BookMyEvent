@@ -1,0 +1,53 @@
+/*-------------------------------------------------------Header Styles-------------------------------------------------------------*/
+header {
+    /*background: rgba(183, 196, 202, 100);*/
+    color: white;
+    padding: 0 20px; /* Supprimer les marges verticales */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ajoute une ombre pour donner de la profondeur */
+    height: 70px; /* Hauteur fixe pour le header */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo img {
+    height: 70px;
+}
+
+/* Navigation Menu */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Connexion / Inscription Button */
+.header-actions .btn {
+    background: white;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Responsive Header - for small screens */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem;
+    }
+
+}
