@@ -1,9 +1,17 @@
-// src/components/Header.js
-import React from 'react';
+import React, { useState } from 'react';
 import '../css/style.css'; // Import CSS
 import '../css/Header.css';
 
 const Header = () => {
+
+  // Manage menu open/close state
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Function to toggle menu open/close
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header>
       <div className="header-container">
@@ -14,9 +22,28 @@ const Header = () => {
           </a>
         </div>
 
+        {/* Menu toggle for small screens (hamburger icon) */}
+        <div className="menu-toggle" onClick={toggleMenu}>
+          <img 
+            src="/images/menu icon.png" 
+            alt="Menu" 
+            className="menu-icon"
+          />
+        </div>
+
+        {/* Phone menu only visible when isMenuOpen is true */}
+        {isMenuOpen && (
+          <div className="phone-menu">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/events">Événements</a></li>
+            <li><a href="/about">À Propos</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </div>
+        )}
+
         {/* Navigation Menu */}
         <nav>
-          <ul className="nav-links">
+          <ul className= "nav-links">
             <li><a href="/">Accueil</a></li>
             <li><a href="/events">Événements</a></li>
             <li><a href="/about">À Propos</a></li>

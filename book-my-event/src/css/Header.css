@@ -41,13 +41,66 @@ header {
     font-size: 16px;
 }
 
-/* Responsive Header - for small screens */
-@media (max-width: 768px) {
+.menu-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
 
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0.5rem;
+/* phone menu  */
+.menu-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.phone-menu {
+    position: absolute; 
+    top: 100%; 
+    left: 0; 
+    background-color: #333; 
+    padding: 20px;
+    width: 100%; 
+    gap: 20px; 
+}
+
+.phone-menu.active {
+    display: flex; 
+    flex-direction: column; 
+}
+
+.menu-toggle {
+    position: relative; 
+}
+
+
+.phone-menu li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+  /* Responsive styles for small screens */
+  @media (max-width: 768px) {
+    /* Hide the nav-links by default */
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #333;
+      padding: 1rem;
+      width: 100%;
     }
-
+  
+    /* Show nav-links when the menu is open */
+    .nav-links.active {
+      display: flex;
+    }
+  
+    /* Show the hamburger icon on small screens */
+    .menu-toggle {
+      display: block;
+    }
 }

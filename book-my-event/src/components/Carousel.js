@@ -1,21 +1,11 @@
 // src/components/Carousel.js
-import React, { useState, useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+import React, { useState } from 'react';
 import '../css/style.css'; // Import CSS
 import '../css/Carousel.css';
 
 const Carousel = () => {
   // useState init at 0 and setCurrentSlide to update the variable
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [direction, setDirection] = useState('');
-
-  useEffect(() => {
-    AOS.init({
-      duration: 500, // Animation duration in milliseconds
-      easing: 'ease-in-out', // Easing function
-    });
-  }, []);
 
   // an array containing text+image
   const slides = [
@@ -32,10 +22,8 @@ const Carousel = () => {
   ];
 
   function changeSlide(direction) {
-    setDirection(direction === -1 ? 'fade-left' : 'fade-right'); // Set the animation direction
-    setCurrentSlide((currentSlide + direction + slides.length) % slides.length); // + slides.length to manage in the good way when we go in negativ
+    setCurrentSlide((currentSlide + direction + slides.length) % slides.length); // + slides.length to manage negative indices
   }
-
 
   return (
     <section className="carousel">
