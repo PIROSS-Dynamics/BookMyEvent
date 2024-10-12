@@ -33,15 +33,15 @@ const Header = () => {
 
         {/* Phone menu only visible when isMenuOpen is true */}
         {isMenuOpen && (
-          <div className="phone-menu">
+          <ul className="phone-menu">
             <li><a href="/">Accueil</a></li>
             <li><a href="/events">Événements</a></li>
             <li><a href="/about">À Propos</a></li>
             <li><a href="/contact">Contact</a></li>
-          </div>
+          </ul>
         )}
 
-        {/* Navigation Menu */}
+        {/* Navigation Menu for desktop */}
         <nav>
           <ul className= "nav-links">
             <li><a href="/">Accueil</a></li>

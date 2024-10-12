@@ -11,17 +11,17 @@ const Footer = () => {
                 <div className="footer-copyright">
                     <p>&copy; 2024 BookMyEvent. Tous droits réservés.</p>
                 </div>
-
+                
                 {/* Social Media */}
                 <div className="footer-social-media">
                     <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/bookmyevent-piross.appspot.com/o/images%2Finstagram%20logo.png?alt=media&token=b60a30bb-5c0d-49f6-8b0c-b7bcc5568317" 
+                        <img src="https://firebasestorage.googleapis.com/v0/b/bookmyevent-piross.appspot.com/o/images%2Flogo%20instagram%20blanc.png?alt=media&token=36cd5949-015c-4bc9-ada9-a2ab821835aa" 
                         alt="Instagram" 
                         className="instagram-icon" />
                     </a>
-                    
+                     
                     <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/bookmyevent-piross.appspot.com/o/images%2Flinkedin%20logopng.png?alt=media&token=920eb541-ad19-40ee-a83d-117ab17defb8" 
+                        <img src="https://firebasestorage.googleapis.com/v0/b/bookmyevent-piross.appspot.com/o/images%2Flogo%20linkedin%20blanc.png?alt=media&token=9322b094-a6ab-48e9-9b62-d26f83bd9329" 
                         alt="LinkedIn" 
                         className="linkedin-icon"/> 
                     </a>

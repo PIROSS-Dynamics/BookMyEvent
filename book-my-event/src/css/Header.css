@@ -1,16 +1,15 @@
-/*-------------------------------------------------------Header Styles-------------------------------------------------------------*/
 header {
-    /*background: rgba(183, 196, 202, 100);*/
     color: white;
-    padding: 0 20px; /* Supprimer les marges verticales */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ajoute une ombre pour donner de la profondeur */
-    height: 70px; /* Hauteur fixe pour le header */
+    padding: 0 20px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    height: 70px;
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative; /* Important for positioning the phone menu */
 }
 
 /* Logo */
@@ -18,7 +17,7 @@ header {
     height: 70px;
 }
 
-/* Navigation Menu */
+/* Navigation Menu (Desktop) */
 .nav-links {
     list-style: none;
     display: flex;
@@ -26,81 +25,87 @@ header {
 }
 
 .nav-links li a {
-    color: black;
     text-decoration: none;
     font-size: 16px;
 }
 
 /* Connexion / Inscription Button */
 .header-actions .btn {
-    background: white;
-    color: black;
+
     padding: 8px 15px;
     border-radius: 5px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 90%;
+}
+
+/* Menu toggle icon */
+.menu-toggle {
+    position: relative;
+    z-index: 10; /* Ensure the toggle icon is in front */
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: none;
 }
 
 .menu-icon {
     width: 40px;
     height: 40px;
     cursor: pointer;
+    display: none;
 }
 
-/* phone menu  */
-.menu-icon {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-}
-
+/* Phone menu styling */
 .phone-menu {
     position: absolute; 
-    top: 100%; 
-    left: 0; 
+    top: 35px; /* Just below the header */
+    right: 0;
+    left: 17%;
     background-color: #333; 
-    padding: 20px;
-    width: 100%; 
-    gap: 20px; 
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 100px;
+    z-index: 9; /* Ensure it appears in front of other content */
 }
-
-.phone-menu.active {
-    display: flex; 
-    flex-direction: column; 
-}
-
-.menu-toggle {
-    position: relative; 
-}
-
 
 .phone-menu li a {
-    color: black;
+    color: #ffffff; 
     text-decoration: none;
     font-size: 16px;
 }
 
-  /* Responsive styles for small screens */
-  @media (max-width: 768px) {
-    /* Hide the nav-links by default */
+/* Responsive styles for small screens */
+@media (max-width: 768px) {
     .nav-links {
       display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      background-color: #333;
-      padding: 1rem;
-      width: 100%;
     }
   
-    /* Show nav-links when the menu is open */
-    .nav-links.active {
-      display: flex;
-    }
-  
-    /* Show the hamburger icon on small screens */
     .menu-toggle {
-      display: block;
+        position: relative;
+        z-index: 10; /* Ensure the toggle icon is in front */
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: block;
     }
+    
+    .menu-icon {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: block;
+    }
+
+    .phone-menu.active {
+        display: flex;
+    }
+
+    .header-actions .btn {
+
+
+        font-size: 70%;
+    }
+
 }

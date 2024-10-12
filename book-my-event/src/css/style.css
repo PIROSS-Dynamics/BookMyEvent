@@ -1,0 +1,65 @@
+.blue-section{
+    background-color: #0A1F44;
+    background: linear-gradient(to bottom, #0A1F44 70%, #103067 100%);
+    border-radius: 25px;
+}
+
+.white-section{
+    background-color: #ffffff;
+}
+
+
+/* -------------------------------------------------Header--------------------------------------------------------- */
+
+
+header{
+    background-color: #0A1F44;
+}
+
+.nav-links li a {
+    color: #ffffff;
+}
+
+.nav-links li a:hover {
+    color: #00B894;
+}
+
+.header-actions .btn {
+    background: #00B894;
+    color: #ffffff;
+}
+
+.header-actions .btn:hover {
+    background-color: #016a55; /* Darker shade on hover */
+}
+
+/* ------------------------------------------------Carousel--------------------------------------------------------- */
+
+
+
+/* ----------------------------------------------SearchSection--------------------------------------------------------*/
+
+.btn-search:hover .search-icon {
+    content: url('https://firebasestorage.googleapis.com/v0/b/bookmyevent-piross.appspot.com/o/images%2Fsearch%20icon%20hover.png?alt=media&token=0f065124-a77c-4ad8-a071-92d9f28729f1');
+}
+
+/* -----------------------------------------------UploadImage-------------------------------------------------------- */
+
+.UploadImage{
+    padding-top: 3%;
+}
+
+/* -------------------------------------------------Footer--------------------------------------------------------- */
+
+footer {
+    background-color: #0A1F44; 
+}
+
+
+.footer-newsletter button {
+    background-color: #00B894; /* Button color */
+}
+
+.footer-newsletter button:hover {
+    background-color: #016a55; /* Darker shade on hover */
+}

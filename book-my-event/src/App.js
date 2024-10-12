@@ -11,11 +11,20 @@ function App() {
   return (
     <div className="App">
 
-      <Header />
-      <Carousel />
-      <SearchSection />
-      <UploadImage />
+      
+
+      <div className='blue-section'>
+        <Header />
+        <Carousel />
+      </div>
+      
+      <div className='white-section'>
+        <SearchSection />
+        <UploadImage />
+      </div>
+      
       <Footer />
+
     </div>
   );
 }

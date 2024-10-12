@@ -24,11 +24,13 @@ const UploadImage = () => {
   };
 
   return (
-    <div>
-      <input type="file" onChange={handleImageUpload} />
-      <button onClick={uploadImage}>Upload Image</button>
-      {imageURL && <img src={imageURL} alt="Uploaded" style={{ marginTop: '20px', width: '300px' }} />}
-    </div>
+    <section className="UploadImage" >
+      <div >
+        <input type="file" onChange={handleImageUpload} />
+        <button onClick={uploadImage}>Upload Image</button>
+        {imageURL && <img src={imageURL} alt="Uploaded" style={{ marginTop: '20px', width: '300px' }} />}
+      </div>
+    </section>
   );
 };
 
